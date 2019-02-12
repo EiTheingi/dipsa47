@@ -1,0 +1,10 @@
+img {
+    height: 64px;
+}
+
+div {
+    border: 1px grey solid;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}

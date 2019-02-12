@@ -1,0 +1,6 @@
+<div *ngFor="let i of inventories">
+  <img [src]="i.image" alt="">
+  <button type="button" (click)="itemSelected(i.key)">
+    {{ i.label | uppercase }}
+  </button>
+</div>

@@ -1,0 +1,14 @@
+<h1>My Shopping Cart</h1>
+
+<div>
+  <span class="cart-item"
+      *ngFor="let c of cart">
+    <img [src]="c.image">
+    {{ c.label }}
+  </span>
+
+</div>
+
+<app-list [inventories]="items" 
+    (onItemSelected)="processItem($event)">
+</app-list>

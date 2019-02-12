@@ -1,0 +1,20 @@
+<h1>My First Angular Application</h1>
+
+<img src="/assets/fruits/acorn_squash.png" alt="">
+
+<div *ngIf="cart.length <= 0">
+  <h3>You have not been clicking</h3>
+</div>
+
+<div *ngIf="cart.length > 1">
+  <div 
+    *ngFor="let d of cart; let i = index">
+    {{ d }}
+  </div>
+</div>
+
+<app-picture 
+  (onSelected)="clicked($event)"
+  *ngFor="let d of days; let i = index"
+  [message]="i + d">
+</app-picture>

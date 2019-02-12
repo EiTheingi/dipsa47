@@ -1,0 +1,16 @@
+
+<div class="surround">
+  <h1 
+    (mouseenter)="mouseEntered($event)" 
+    (mouseleave)="mouseLeft($event)">
+    {{ message }} {{ counter }}
+  </h1>
+
+  <button type="button" (click)="buttonClicked($event)">
+    {{ message }}
+  </button>
+
+  <br> <br>
+
+  <input type="text" [value]="message" id="">
+</div>
