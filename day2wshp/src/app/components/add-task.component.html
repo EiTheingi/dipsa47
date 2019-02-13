@@ -1,0 +1,32 @@
+<form fxLayout="column row"
+    #form="ngForm" (ngSubmit)="addTask(form)">
+
+  <mat-form-field>
+    <input matInput type="text" name="taskName" required
+        placeholder="Task name" ngModel>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input matInput type="datetime-local" name="dueDate" required
+        placeholder="Due date" ngModel>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="number" name="priority" required
+        placeholder="Priority" min="1" max="10" ngModel>
+  </mat-form-field>
+
+  <div fxLayout="row column" fxLayoutAlign="space-between">
+    <button type="reset" mat-raised-button color="warn">
+      <mat-icon>clear</mat-icon>
+      Add
+    </button>
+
+    <button type="submit" mat-raised-button color="accent" [disabled]="form.invalid">
+      <mat-icon>library_add</mat-icon>
+      Add
+    </button>
+  </div>
+
+</form>
